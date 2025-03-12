@@ -13,7 +13,15 @@ Steps-:
 The website is under-construction. 🚧🚧
 
 
-Requirements
+# Project Dependencies
+
+This project utilizes the following dependencies:
+
+## Node.js Modules
+
+Install these modules using `npm install`:
+`npm install express cloudinary mysql2 express-fileupload`:
+
 # Modules
 express==4.17.1  # Or your specific version
 cloudinary==1.37.3 # Or your specific version
@@ -55,3 +63,27 @@ https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
 
 # Cloudinary Configuration (NOT part of requirements.txt, but important)
 # Your Cloudinary configuration details (cloud_name, api_key, api_secret) should be stored securely and not included in this file.
+
+
+nexthope_site/
+├── .git/
+│   └── ... (Git repository files)
+├── node_modules/
+│   ├── ... (npm packages)
+├── pages/
+│   ├── index.html    (Main/Home page)
+│   ├── vol-dash.html (Volunteer dashboard)
+│   ├── vol-kyc.html  (Volunteer KYC form)
+├── public/
+│   ├── style.css    (Optional: CSS files)
+│   ├── script.js     (Optional: JavaScript files)
+│   ├── images/      (Optional: Image assets)
+│   ├── uploads/     (Folder for uploaded files)
+├── package.json
+│   └── ... (Project metadata, dependencies, scripts)
+├── package-lock.json
+│   └── ... (Exact dependency versions)
+├── server.js
+│   └── ... (Main server-side application file)
+└── README.md
+└── ... (This file)
