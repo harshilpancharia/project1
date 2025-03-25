@@ -3,12 +3,13 @@ var cloudinary=require("cloudinary").v2;
 var mysql2 = require("mysql2");
 var fileUploader =require("express-fileupload");
 var app=express();
+require("dotnet").config
 
 //Saving cloudinary information
 cloudinary.config({ 
-    cloud_name: 'dskm9q08s', 
-    api_key: '213668766262337', 
-    api_secret: 'ZoScT-y-cjyeswEovIuvAudGJKo' // Click 'View API Keys' above to copy your API secret
+    cloud_name: process.env.cloud_name, 
+    api_key: process.env.api_key, 
+    api_secret: process.env.api_secret // Click 'View API Keys' above to copy your API secret
 });
 
 
@@ -18,7 +19,7 @@ app.listen(2005,function(){
 })
 
 // Establishing Connection with Database
-let dbConfig = "mysql://avnadmin:AVNS_oeO5KeE5srFIkZGbpDm@mysql-practice-fullstack-training.g.aivencloud.com:19960/NextHope";
+let dbConfig = process.env.dbConfig;
 let mysqlserver=mysql2.createConnection(dbConfig);
 
 mysqlserver.connect(function(err){
